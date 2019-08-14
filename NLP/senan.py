@@ -28,7 +28,8 @@ token = RegexpTokenizer(r'[a-zA-Z0-9]+')
 cv = CountVectorizer(lowercase=True,stop_words='english',ngram_range = (1,1),tokenizer = token.tokenize)
 text_counts= cv.fit_transform(data['Phrase'])
 
-#2. TF-IDF
+# 2. TF-IDF
+# idf(W) = log(#(documents)/#(documents containing word W)) 
 # from sklearn.feature_extraction.text import TfidfVectorizer
 # tf=TfidfVectorizer()
 # text_tf= tf.fit_transform(data['Phrase'])
